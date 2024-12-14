@@ -9,27 +9,8 @@ import Grid from "./components/Grid.vue";
     <Navbar />
 
     <div class="flex flex-col gap-16 space-y-8 px-16 py-48">
-      <div class="flex flex-col gap-4">
-        <h1 class="text-4xl font-bold text-black dark:text-white">
-          Martin Justin Medina
-        </h1>
-        <span class="text-sm text-gray-700 dark:text-gray-400"
-          >A brief description here</span
-        >
 
-        <div class="flex gap-2">
-          <span class="text-black dark:text-white">social_media_icon1</span>
-          <span class="text-black dark:text-white">social_media_icon2</span>
-          <span class="text-black dark:text-white">social_media_icon3</span>
-        </div>
-
-        <button
-          type="button"
-          class="mb-2 me-2 w-40 rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Resume
-        </button>
-      </div>
+      <!--info + resume btn here -->
 
       <div class="flex flex-col gap-5">
         <h1 class="text-2xl font-bold text-black dark:text-white">My Skills</h1>
