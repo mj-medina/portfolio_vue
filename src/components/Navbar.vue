@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import useDarkMode from '@/composables/useDarkMode';
+import { Moon, Sun } from '@/assets/icons';
+import Icon from '@/components/Icon.vue';
 
 const { isDarkMode, toggleDarkMode } = useDarkMode();
 </script>
@@ -10,7 +12,7 @@ const { isDarkMode, toggleDarkMode } = useDarkMode();
     class="fixed z-40 w-full border-gray-200 bg-white dark:bg-gray-900"
   >
     <div
-      class="border-black-300 mx-auto flex flex-wrap items-center justify-between border-b dark:border-gray-500 p-4"
+      class="border-black-300 mx-auto flex flex-wrap items-center justify-between border-b p-4 dark:border-gray-500"
     >
       <span
         class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white"
@@ -30,11 +32,9 @@ const { isDarkMode, toggleDarkMode } = useDarkMode();
             </a>
           </li>
           <li @click="toggleDarkMode">
-            <span
-              class="block cursor-pointer rounded px-3 py-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
-            >
-              {{ isDarkMode ? '🌑' : '☀️' }}
-            </span>
+            <div class="cursor-pointer">
+              <Icon :name="isDarkMode ? Sun : Moon" class="h-5 w-5" />
+            </div>
           </li>
         </ul>
       </div>
