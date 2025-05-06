@@ -1,6 +1,6 @@
 // src/data/portfolioData.ts
 
-// --- Interfaces --- 
+// --- Interfaces ---
 export interface Skill {
   name: string;
   icon: string; // Font Awesome class string OR path to SVG
@@ -42,14 +42,14 @@ export interface ContactData {
   linkedinUrl: string;
 }
 
-// --- Portfolio Data --- 
+// --- Portfolio Data ---
 
 export const heroData: HeroData = {
-  name: "Martin Doe", // TODO: Update Name
-  title: "Mid-Fullstack Developer",
-  description: "Passionate developer with experience in building modern web applications using Vue, Laravel, and more. Always eager to learn and contribute to impactful projects.",
-  resumeUrl: "/path/to/your/resume.pdf", // TODO: Update Path
-  resumeFilename: "MartinDoe_Resume.pdf" // TODO: Update Filename
+  name: 'Martin Justin Medina',
+  title: 'Mid-Fullstack Developer',
+  description: 'Building full-stack applications. Always learning.',
+  resumeUrl: '', // TODO: Update Path
+  resumeFilename: '', // TODO: Update Filename
 };
 
 export const skillCategories: SkillCategory[] = [
@@ -64,7 +64,7 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Inertia', icon: '/src/assets/logos/inertiajs.svg' },
       { name: 'Jquery', icon: '/src/assets/logos/jquery.svg' },
       { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
-    ]
+    ],
   },
   {
     title: 'Backend',
@@ -73,13 +73,11 @@ export const skillCategories: SkillCategory[] = [
       { name: 'PHP', icon: 'fab fa-php' },
       { name: 'Express', icon: '/src/assets/logos/express.svg' },
       { name: 'NodeJS', icon: 'fab fa-node-js' },
-    ]
+    ],
   },
   {
     title: 'Databases',
-    skills: [
-      { name: 'MySQL', icon: 'fas fa-database' }
-    ]
+    skills: [{ name: 'MySQL', icon: 'fas fa-database' }],
   },
   {
     title: 'Tools',
@@ -88,8 +86,8 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Docker', icon: 'fab fa-docker' },
       { name: 'Jira', icon: 'fab fa-jira' },
       { name: 'Confluence', icon: 'fab fa-confluence' },
-    ]
-  }
+    ],
+  },
 ];
 
 export const historyItems: TimelineItem[] = [
@@ -143,29 +141,30 @@ export const historyItems: TimelineItem[] = [
 export const projects: Project[] = [
   {
     title: 'Project Alpha',
-    description: 'A web application built with Vue and Laravel for managing tasks.',
+    description:
+      'A web application built with Vue and Laravel for managing tasks.',
     imageUrl: 'https://via.placeholder.com/400x250/777/eee?text=Project+Alpha',
     link: '#',
-    tags: ['Vue', 'Laravel', 'Tailwind']
+    tags: ['Vue', 'Laravel', 'Tailwind'],
   },
   {
     title: 'Project Beta',
     description: 'An e-commerce storefront developed using Nuxt and Express.',
     imageUrl: 'https://via.placeholder.com/400x250/ddd/777?text=Project+Beta',
     link: '#',
-    tags: ['Nuxt', 'Node.js', 'Flowbite']
+    tags: ['Nuxt', 'Node.js', 'Flowbite'],
   },
   {
     title: 'Project Gamma',
     description: 'A personal blog site created with VuePress and Markdown.',
     imageUrl: 'https://via.placeholder.com/400x250/eee/777?text=Project+Gamma',
     link: '#',
-    tags: ['VuePress', 'Markdown', 'Static Site']
+    tags: ['VuePress', 'Markdown', 'Static Site'],
   },
 ];
 
 export const contactData: ContactData = {
   email: 'your.email@example.com', // TODO: Update Email
   githubUrl: 'https://github.com/yourusername', // TODO: Update GitHub
-  linkedinUrl: 'https://linkedin.com/in/yourusername' // TODO: Update LinkedIn
-}; 
+  linkedinUrl: 'https://linkedin.com/in/yourusername', // TODO: Update LinkedIn
+};
