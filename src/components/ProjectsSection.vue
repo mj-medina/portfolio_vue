@@ -1,29 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import type { Project } from '@/data/portfolioData';
 
-const projects = ref([
-  {
-    title: 'Project Alpha',
-    description: 'A web application built with Vue and Laravel for managing tasks.',
-    imageUrl: 'https://via.placeholder.com/400x250/777/eee?text=Project+Alpha',
-    link: '#',
-    tags: ['Vue', 'Laravel', 'Tailwind']
-  },
-  {
-    title: 'Project Beta',
-    description: 'An e-commerce storefront developed using Nuxt and Express.',
-    imageUrl: 'https://via.placeholder.com/400x250/ddd/777?text=Project+Beta',
-    link: '#',
-    tags: ['Nuxt', 'Node.js', 'Flowbite']
-  },
-  {
-    title: 'Project Gamma',
-    description: 'A personal blog site created with VuePress and Markdown.',
-    imageUrl: 'https://via.placeholder.com/400x250/eee/777?text=Project+Gamma',
-    link: '#',
-    tags: ['VuePress', 'Markdown', 'Static Site']
-  },
-]);
+defineProps<{ projects: Project[] }>();
 </script>
 
 <template>
