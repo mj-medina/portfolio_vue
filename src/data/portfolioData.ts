@@ -60,8 +60,8 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Typescript', icon: '/src/assets/logos/typescript.svg' },
       { name: 'Nuxt', icon: '/src/assets/logos/nuxt.svg' },
       { name: 'Vue', icon: 'fab fa-vuejs' },
-      { name: 'Tailwind', icon: 'fas fa-wind' },
-      { name: 'Inertia', icon: 'fas fa-link' },
+      { name: 'Tailwind', icon: '/src/assets/logos/tailwindcss.svg' },
+      { name: 'Inertia', icon: '/src/assets/logos/inertiajs.svg' },
       { name: 'Jquery', icon: '/src/assets/logos/jquery.svg' },
       { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
     ]
