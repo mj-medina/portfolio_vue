@@ -1,9 +1,7 @@
-// src/data/portfolioData.ts
-
-// --- Interfaces ---
 export interface Skill {
   name: string;
-  icon: string; // Font Awesome class string OR path to SVG
+  /** Font Awesome class string OR path to SVG */
+  icon: string;
 }
 
 export interface SkillCategory {
@@ -26,6 +24,7 @@ export interface Project {
   imageUrl: string;
   link: string;
   tags: string[];
+  isHobby?: boolean; // Added optional isHobby property
 }
 
 export interface HeroData {
@@ -42,14 +41,12 @@ export interface ContactData {
   linkedinUrl: string;
 }
 
-// --- Portfolio Data ---
-
 export const heroData: HeroData = {
   name: 'Martin Justin Medina',
-  title: 'Mid-Fullstack Developer',
-  description: 'Building full-stack applications. Always learning.',
-  resumeUrl: '', // TODO: Update Path
-  resumeFilename: '', // TODO: Update Filename
+  title: 'Full-stack Web Developer',
+  description: 'Love building cool stuff and picking up new tech along the way.',
+  resumeUrl: 'https://1drv.ms/b/c/931bfb673de21cbb/Ebsc4j1n-xsggJMaCwAAAAAB1fQ-AcSjlLznelARfLGefg?e=md5Hgd',
+  resumeFilename: '',
 };
 
 export const skillCategories: SkillCategory[] = [
@@ -57,12 +54,12 @@ export const skillCategories: SkillCategory[] = [
     title: 'Frontend',
     skills: [
       { name: 'Javascript', icon: 'fab fa-js-square' },
-      { name: 'Typescript', icon: '/src/assets/logos/typescript.svg' },
-      { name: 'Nuxt', icon: '/src/assets/logos/nuxt.svg' },
+      { name: 'Typescript', icon: '/logos/typescript.svg' },
+      { name: 'Nuxt', icon: '/logos/nuxt.svg' },
       { name: 'Vue', icon: 'fab fa-vuejs' },
-      { name: 'Tailwind', icon: '/src/assets/logos/tailwindcss.svg' },
-      { name: 'Inertia', icon: '/src/assets/logos/inertiajs.svg' },
-      { name: 'Jquery', icon: '/src/assets/logos/jquery.svg' },
+      { name: 'Tailwind', icon: '/logos/tailwindcss.svg' },
+      { name: 'Inertia', icon: '/logos/inertiajs.svg' },
+      { name: 'Jquery', icon: '/logos/jquery.svg' },
       { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
     ],
   },
@@ -71,7 +68,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'Laravel', icon: 'fab fa-laravel' },
       { name: 'PHP', icon: 'fab fa-php' },
-      { name: 'Express', icon: '/src/assets/logos/express.svg' },
+      { name: 'Express', icon: '/logos/express.svg' },
       { name: 'NodeJS', icon: 'fab fa-node-js' },
     ],
   },
@@ -93,11 +90,9 @@ export const skillCategories: SkillCategory[] = [
 export const historyItems: TimelineItem[] = [
   {
     company: 'Goteam Philippines',
-    position: 'Mid-Fullstack Developer',
+    position: 'Full-stack Web Developer',
     details: [
-      'Worked on full-stack features',
-      'Implemented RESTful APIs',
-      'Optimized database queries',
+      'TBA',
     ],
     duration: '2023 - present',
     current: true,
@@ -107,12 +102,24 @@ export const historyItems: TimelineItem[] = [
     company: 'Cafe24 Philippines',
     position: 'Senior Web Developer',
     details: [
-      'Developed e-commerce features',
-      'Maintained legacy systems',
-      'Integrated third-party services',
-      'Collaborated with designers for UI improvements',
+      'Led and guided junior web developers, overseeing their work and supporting their growth.',
+      'Worked closely with PMs, QA, and developers to keep projects aligned with goals.',
+      'Created technical analyses, development plans, and deployment strategies to guide and document project work.',
+      'Developed new features and maintained internal applications, including reservation tools integrated with Slack.',
+      'Provided support, maintenance, and improvements for other internal applications.',
     ],
-    duration: '2018 - 2023',
+    duration: '2021 - 2023',
+    current: false,
+    type: 'work' as const,
+  },
+  {
+    company: 'Cafe24 Philippines',
+    position: 'Junior Web Developer',
+    details: [
+      'Modernized legacy systems to OOP and built new features for business websites.',
+      'Created internal tools for employee evaluations and performance tracking.',
+    ],
+    duration: '2018 - 2021',
     current: false,
     type: 'work' as const,
   },
@@ -120,9 +127,8 @@ export const historyItems: TimelineItem[] = [
     company: 'Sutherland Global Services',
     position: 'IT Support Intern',
     details: [
-      'Provided technical support',
-      'Documented support processes',
-      'Assisted in hardware troubleshooting',
+      'Provided technical support by troubleshooting hardware issues, network connectivity problems, software glitches, and system errors.',
+      'Assisted users in resolving technical concerns to ensure minimal downtime and smooth operations.',
     ],
     duration: '2017',
     current: false,
@@ -140,31 +146,35 @@ export const historyItems: TimelineItem[] = [
 
 export const projects: Project[] = [
   {
-    title: 'Project Alpha',
+    title: 'Soho Business Center',
     description:
-      'A web application built with Vue and Laravel for managing tasks.',
-    imageUrl: 'https://via.placeholder.com/400x250/777/eee?text=Project+Alpha',
-    link: '#',
-    tags: ['Vue', 'Laravel', 'Tailwind'],
+      'Shared office spaces designed for e‑commerce entrepreneurs, offering workspaces and logistics support',
+    imageUrl: 'https://img.cafe24.com/images/common/cafe24.svg',
+    link: 'https://soho.cafe24.com/',
+    tags: ['PHP', 'Javascript'],
   },
   {
-    title: 'Project Beta',
-    description: 'An e-commerce storefront developed using Nuxt and Express.',
-    imageUrl: 'https://via.placeholder.com/400x250/ddd/777?text=Project+Beta',
+    title: 'Microblog',
+    description:
+      'A simple social media platform for sharing short posts, media, and real-time conversations. Connect, engage, and explore topics.',
+    imageUrl: 'https://placehold.co/600x400/gray/white',
     link: '#',
-    tags: ['Nuxt', 'Node.js', 'Flowbite'],
+    tags: ['Laravel', 'Nuxt', 'Tailwind'],
+    isHobby: true,
   },
   {
-    title: 'Project Gamma',
-    description: 'A personal blog site created with VuePress and Markdown.',
-    imageUrl: 'https://via.placeholder.com/400x250/eee/777?text=Project+Gamma',
+    title: 'Todo',
+    description:
+      'A clean, easy app to manage tasks and stay organized.',
+    imageUrl: 'https://placehold.co/600x400/gray/white',
     link: '#',
-    tags: ['VuePress', 'Markdown', 'Static Site'],
-  },
+    tags: ['Laravel', 'InertiaJS', 'Tailwind'],
+    isHobby: true,
+  }
 ];
 
 export const contactData: ContactData = {
-  email: 'your.email@example.com', // TODO: Update Email
-  githubUrl: 'https://github.com/yourusername', // TODO: Update GitHub
-  linkedinUrl: 'https://linkedin.com/in/yourusername', // TODO: Update LinkedIn
+  email: 'martin.justin04@gmail.com',
+  githubUrl: 'https://github.com/mj-medina',
+  linkedinUrl: 'https://www.linkedin.com/in/martin-justin-medina-08a041280/',
 };

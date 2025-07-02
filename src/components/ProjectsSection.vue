@@ -14,11 +14,19 @@ defineProps<{ projects: Project[] }>();
       class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col"
     >
       <a :href="project.link" target="_blank" rel="noopener noreferrer">
-        <img class="rounded-t-lg w-full h-48 object-cover" :src="project.imageUrl" :alt="project.title + ' screenshot'" />
+        <img class="rounded-t-lg w-full h-48 object-contain" :src="project.imageUrl" :alt="project.title + ' screenshot'" />
       </a>
       <div class="p-5 flex flex-col flex-grow">
-        <a :href="project.link" target="_blank" rel="noopener noreferrer">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 transition-colors">{{ project.title }}</h5>
+        <a :href="project.link" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 transition-colors">
+            {{ project.title }}
+          </h5>
+          <span
+            v-if="project.isHobby"
+            class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-0.5 rounded dark:bg-green-900 dark:text-green-200"
+          >
+            Hobby
+          </span>
         </a>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 flex-grow">{{ project.description }}</p>
         <!-- Tags -->
@@ -36,4 +44,4 @@ defineProps<{ projects: Project[] }>();
       </div>
     </div>
   </div>
-</template> 
+</template>

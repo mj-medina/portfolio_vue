@@ -68,7 +68,7 @@ onMounted(() => {
     <DarkModeToggle />
     <!-- Footer -->
     <footer class="text-center py-8 border-t border-gray-200 dark:border-gray-700">
-      <p class="text-gray-600 dark:text-gray-400">&copy; {{ new Date().getFullYear() }} {{ heroData.name }}. All rights reserved.</p>
+      <p class="text-gray-600 dark:text-gray-400">All trademarks, logos, and brand names are the property of their respective owners.</p>
     </footer>
   </div>
 </template>
